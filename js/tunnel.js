@@ -229,7 +229,7 @@ window.onload = function() {
   loader.crossOrigin = "Anonymous";
 
   loader.load(
-    "image/test.jpg",
+    "image/galaxytexture.jpg",
     function(texture) {
       document.body.classList.remove("loading");
       window.tunnel = new Tunnel(texture);
