@@ -30,6 +30,50 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        /* @keyframes zoomout {
+            0% {
+                transform: scale(1,1);
+            }
+            80% {
+                transform: scale(0.1,0.1) translateY(0%);
+                opacity: 0.1;
+            }
+            100% {
+                transform: scale(0, 0) translateY(125%);
+                opacity: 0;
+                display: none;
+            }
+        } */
+
+        @keyframes zoomout {
+            0% {
+                transform: scale(0,0) translateY(125%);
+                opacity: 0;
+            }
+            20% {
+                transform: scale(0,0) translateY(125%);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(0.1, 0.1) translateY(0%);
+                opacity: 0.1;
+            }
+            80% {
+                transform: scale(0.75, 0.75);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.75, 0.75);
+                opacity: 1;
+            }
+        }
+
+        .credenzlogo img {
+            animation: zoomout 8s;
+            animation-fill-mode: forwards;
+        }
+    </style>
 
 </head>
 
@@ -43,6 +87,11 @@
                 <div class="content">
                     <canvas id="scene"></canvas>
                 </div>
+                <center>
+                    <div class="credenzlogo" id="credenzlogo">
+                        <img src="./image/CR.png" alt="logo" style="height: 100vh;">
+                    </div>
+                </center>
                 
                 <!-- <div class="ieeelogo">
                     <img src="image/logopisb.png" class="img-responsive img-fluid" />

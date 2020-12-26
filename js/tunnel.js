@@ -5,7 +5,10 @@ function Tunnel(texture) {
   this.init();
   this.createMesh(texture);
 
-  this.handleEvents();
+  // this.handleEvents();
+  setTimeout(() => {
+    this.handleEvents();
+  }, 8000)
 
   this.initAnimation();
 
