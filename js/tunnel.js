@@ -93,8 +93,8 @@ Tunnel.prototype.onResize = function() {
 };
 
 Tunnel.prototype.onMouseMove = function(e) {
-  this.mouse.target.x = e.clientX;
-  this.mouse.target.y = e.clientY;
+  this.mouse.target.x = window.innerWidth/2;
+  this.mouse.target.y = window.innerHeight/2;
 };
 
 Tunnel.prototype.update = function() {
